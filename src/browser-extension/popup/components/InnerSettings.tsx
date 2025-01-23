@@ -15,6 +15,7 @@ import { IoIosSave } from 'react-icons/io'
 import { useThemeType } from '../../common/hooks/useThemeType'
 import { Select, Option } from 'baseui-sd/select'
 import { defaultSourceLangId, defaultTargetLangId, langOptions } from '../../utils/config'
+import { FaGithub } from "react-icons/fa";
 
 const linkStyle = {
     color: 'inherit',
@@ -206,6 +207,15 @@ export function InnerSettings({
                             flexGrow: 1,
                         }}
                     />
+                    <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 10,
+                        fontSize: '16px'
+                    }}>
+                        <FaGithub size={40}/>
+                        <a style={{color: '#fff'}} href='https://github.com/hu-ke/gemini-video-subtitle' target='_blank'>gemini-video-subtitle</a>
+                    </div>
                 </div>
                 <div style={{padding: '16px'}}></div>
             </nav>

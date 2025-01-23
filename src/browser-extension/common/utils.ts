@@ -14,6 +14,7 @@ const settingKeys: Record<keyof ISettings, number> = {
     apiKeys: 1,
     sourceLangId: 0,
     targetLangId: 0,
+    themeType: 0
 }
 
 export async function getSettings(): Promise<ISettings> {
@@ -23,6 +24,9 @@ export async function getSettings(): Promise<ISettings> {
     const settings = items as ISettings
     if (!settings.sourceLangId) {
         settings.sourceLangId = defaultSourceLangId
+    }
+    if (!settings.themeType) {
+        settings.themeType = 'followTheSystem'
     }
     if (!settings.targetLangId) {
         settings.targetLangId = defaultTargetLangId

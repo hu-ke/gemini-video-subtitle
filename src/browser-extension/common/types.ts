@@ -44,4 +44,5 @@ export interface ISettings {
     sourceLangId: string
     targetLangId: string
     apiKeys: string
+    themeType: string|number
 }
