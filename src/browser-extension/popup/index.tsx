@@ -1,6 +1,6 @@
 import '../enable-dev-hmr'
 import { createRoot } from 'react-dom/client'
-import { Translator } from './components/Translator'
+import { Settings } from './components/Settings'
 import { Client as Styletron } from 'styletron-engine-atomic'
 import './index.css'
 import { PREFIX } from '../utils/constants'
@@ -24,7 +24,7 @@ function App() {
             }}
             data-testid='popup-container'
         >
-            <Translator engine={engine} />
+            <Settings engine={engine} />
         </div>
     )
 }

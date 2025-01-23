@@ -142,7 +142,7 @@ export default function TitleBar({ onClose, engine }: TitleBarProps) {
                                     <BiCollapseVertical size={16} />
                                 </div>
                             </Tooltip>
-                            <Tooltip content={'Close'} placement='bottom' onMouseEnterDelay={1000}>
+                            {/* <Tooltip content={'Close'} placement='bottom' onMouseEnterDelay={1000}>
                                 <div
                                     className={styles.actionIcon}
                                     onClick={onClose}
@@ -150,7 +150,7 @@ export default function TitleBar({ onClose, engine }: TitleBarProps) {
                                 >
                                     <RxCross2 size={16} />
                                 </div>
-                            </Tooltip>
+                            </Tooltip> */}
                         </div>
                     </div>
                 )

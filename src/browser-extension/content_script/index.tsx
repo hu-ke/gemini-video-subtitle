@@ -20,11 +20,11 @@ let root: Root | null = null
 const generateId = createGenerateId()
 
 async function hidePopupCard() {
-    const $popupCard: HTMLDivElement | null = await queryPopupCardElement()
-    if (!$popupCard) {
-        return
-    }
-    $popupCard.style.visibility = 'hidden'
+    // const $popupCard: HTMLDivElement | null = await queryPopupCardElement()
+    // if (!$popupCard) {
+    //     return
+    // }
+    // $popupCard.style.visibility = 'hidden'
 }
 
 async function createPopupCard() {
