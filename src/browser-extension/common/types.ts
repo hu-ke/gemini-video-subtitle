@@ -1,5 +1,4 @@
 import { Theme } from 'baseui-sd/theme'
-import { TTSProvider } from './tts/types'
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 interface ISync {
@@ -41,101 +40,8 @@ export interface IThemedStyleProps {
     isDesktopApp?: boolean
     showLogo?: boolean
 }
-
-export type LanguageDetectionEngine = 'google' | 'baidu' | 'bing' | 'local'
-
-export type ProxyProtocol = 'HTTP' | 'HTTPS'
-
 export interface ISettings {
     sourceLangId: string
     targetLangId: string
-    automaticCheckForUpdates: boolean
     apiKeys: string
-    apiURL: string
-    apiURLPath: string
-    apiModel: string
-    chatgptModel: string
-    azureAPIKeys: string
-    azureAPIURL: string
-    azureAPIURLPath: string
-    azureAPIModel: string
-    azMaxWords: number
-    enableBackgroundBlur: boolean
-    enableMica: boolean // deprecated, please use enableBackgroundBlur
-    miniMaxGroupID: string
-    miniMaxAPIKey: string
-    miniMaxAPIModel: string
-    geminiAPIURL: string
-    geminiAPIKey: string
-    geminiAPIModel: string
-    moonshotAPIKey: string
-    moonshotAPIModel: string
-    deepSeekAPIKey: string
-    deepSeekAPIModel: string
-    autoTranslate: boolean
-    defaultTargetLanguage: string
-    alwaysShowIcons: boolean
-    hotkey?: string
-    displayWindowHotkey?: string
-    ocrHotkey?: string
-    writingTargetLanguage: string
-    writingHotkey?: string
-    writingNewlineHotkey?: string
-    themeType?: ThemeType
-    i18n?: string
-    tts?: {
-        voices?: {
-            voice: string
-        }[]
-        provider?: TTSProvider
-        volume?: number
-        rate?: number
-    }
-    restorePreviousPosition?: boolean
-    selectInputElementsText?: boolean
-    readSelectedWordsFromInputElementsText?: boolean
-    runAtStartup?: boolean
-    disableCollectingStatistics?: boolean
-    allowUsingClipboardWhenSelectedTextNotAvailable?: boolean
-    pinned?: boolean
-    autoCollect?: boolean
-    hideTheIconInTheDock?: boolean
-    languageDetectionEngine?: LanguageDetectionEngine
-    autoHideWindowWhenOutOfFocus?: boolean
-    proxy?: {
-        enabled?: boolean
-        protocol?: ProxyProtocol
-        server?: string
-        port?: string
-        basicAuth?: {
-            username?: string
-            password?: string
-        }
-        noProxy?: string
-    }
-    customModelName?: string
-    ollamaAPIURL: string
-    ollamaAPIModel: string
-    ollamaCustomModelName: string
-    ollamaModelLifetimeInMemory: string
-    groqAPIURL: string
-    groqAPIURLPath: string
-    groqAPIModel: string
-    groqAPIKey: string
-    groqCustomModelName: string
-    claudeAPIURL: string
-    claudeAPIURLPath: string
-    claudeAPIModel: string
-    claudeAPIKey: string
-    claudeCustomModelName: string
-    kimiAccessToken: string
-    kimiRefreshToken: string
-    chatglmAccessToken: string
-    chatglmRefreshToken: string
-    cohereAPIKey: string
-    cohereAPIModel: string
-    fontSize: number
-    uiFontSize: number
-    iconSize: number
-    noModelsAPISupport: boolean
 }

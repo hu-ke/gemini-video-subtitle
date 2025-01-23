@@ -84,7 +84,6 @@ async function showPopupCard(reference: ReferenceElement) {
                     <InnerContainer reference={reference}>
                         <LiveAPIProvider url={uri} apiKey={apiKey}>
                             <TitleBar 
-                                pinned={settings.pinned} 
                                 onClose={hidePopupCard} 
                                 engine={engine}
                             />

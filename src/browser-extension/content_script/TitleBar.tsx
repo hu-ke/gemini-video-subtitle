@@ -5,7 +5,7 @@ import { Provider as StyletronProvider } from 'styletron-react'
 import { Client as Styletron } from 'styletron-engine-atomic'
 import { IThemedStyleProps } from '../common/types'
 import { useTheme } from '../utils/hooks/useTheme'
-import { RxCross2 } from 'react-icons/rx'
+// import { RxCross2 } from 'react-icons/rx'
 import LogoWithText from '../common/components/LogoWithText'
 import { Tooltip } from '../common/components/Tooltip'
 import { AudioRecorder } from './lib/audio-recorder'
@@ -49,7 +49,6 @@ const useStyles = createUseStyles({
 })
 
 type TitleBarProps = {
-    pinned?: boolean
     engine: Styletron
     onClose: () => void
 }
