@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Gemini Video Subtitle</title>
+    <style>
+      html, body {
+          margin: 0px;
+          padding: 0px;
+          height: 40%;
+      }
+      body {
+        position: relative;
+        min-width: 700px;
+        min-height: 200px;
+        background: #000;
+      }
+      #root {
+        height: 100%;
+      }
+      [data-baseweb='tooltip'],
+      [data-baseweb='toaster'],
+      [data-baseweb='modal'],
+      [data-baseweb='popover'] {
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/browser-extension/popup/index.tsx"></script>
+  </body>
+</html>
+

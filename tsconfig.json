@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "lib": ["DOM", "DOM.Iterable", "es2015"],
+        "allowJs": false,
+        "useDefineForClassFields": true,
+        "module": "ESNext",
+        "target": "es2017",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "sourceMap": false,
+        "rootDir": ".",
+        "outDir": "dist/js",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "noEmitOnError": true,
+        "jsx": "react-jsx",
+        "typeRoots": ["node_modules/@types/", "node_modules"],
+        "resolveJsonModule": true,
+        "types": ["vite-plugin-svgr/client", "vite/client", "chrome", "tampermonkey"],
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["src", "vite.config*.ts", ".eslintrc.js"]
+}
