@@ -23,7 +23,7 @@ import { LiveConfig } from "../lib/multimodal-live-types";
 import { AudioStreamer } from "../lib/audio-streamer";
 import { audioContext } from "../lib/utils";
 import VolMeterWorket from "../lib/worklets/vol-meter";
-import { instructions, getLangLabel } from "../../utils/config";
+import { instructions } from "../../utils/config";
 import * as utils from '../../common/utils'
 
 export type UseLiveAPIResults = {
@@ -74,7 +74,6 @@ export function useLiveAPI({
               text: instructions({
                 sourceLangId,
                 targetLangId,
-                targetLangLabel: getLangLabel(targetLangId)
               })
             }
           ],

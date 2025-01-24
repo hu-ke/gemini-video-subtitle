@@ -1,7 +1,7 @@
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://hukepublicbucket.oss-cn-hangzhou.aliyuncs.com/assets/gemini-video-subtitle.png">
-  <img alt="NebulaGraph Data Intelligence Suite(ngdi)" src="https://hukepublicbucket.oss-cn-hangzhou.aliyuncs.com/assets/gemini-video-subtitle.png">
+  <source media="(prefers-color-scheme: dark)" srcset="./public/gemini-video-subtitle.png">
+  <img alt="NebulaGraph Data Intelligence Suite(ngdi)" src="./public/gemini-video-subtitle.png">
 </picture>
 <p align="center">
     <em>Realtime transcription of videos in any language on any web page – powered by Gemini Multimodal.</em>
@@ -21,7 +21,8 @@
 </p>
 
 # Showcase
-## English to Chinese
+## 1.English to Chinese
 ![screenshot1](./public/screenshot1.png)
-
+## 2.Japanese to English
+![screenshot1](./public/screenshot2.png)
 ## Japanese to English
