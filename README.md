@@ -42,7 +42,7 @@
 
 # Getting Started
 ## Step1: Obtain a Gemini API Key
-To use this extension, you need a Gemini API key. You can apply for one [here](https://platform.openai.com/account/api-keys)
+To use this extension, you need a Gemini API key. You can apply for one [here](https://aistudio.google.com/apikey)
 ## Step2: Configure the API Key
 Once you have your key, configure it within the extension to enable real-time transcription and translation.
 <p align="center">
