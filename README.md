@@ -21,8 +21,23 @@
 </p>
 
 # Showcase
-## 1.English to Chinese
-![screenshot1](./public/screenshot1.png)
-## 2.Japanese to English
-![screenshot1](./public/screenshot2.png)
-## Japanese to English
+- 1.English to Chinese
+<p align="center">
+  <a href="./public/screenshot1.png" target="_blank">
+    <img width="700" src="./public/screenshot1.png" />
+  </a>
+</p>
+- 2.Japanese to English
+<p align="center">
+  <a href="./public/screenshot2.png" target="_blank">
+    <img width="700" src="./public/screenshot2.png" />
+  </a>
+</p>
+
+# Preparation
+- (required) Apply for an Gemini API key [here](https://platform.openai.com/account/api-keys)
+<p align="center">
+  <a href="./public/popup-config.png" target="_blank">
+    <img width="700" src="./public/popup-config.png" />
+  </a>
+</p>
