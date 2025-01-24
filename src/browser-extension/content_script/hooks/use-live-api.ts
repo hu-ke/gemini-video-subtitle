@@ -62,7 +62,7 @@ export function useLiveAPI({
 
   useEffect(() => {
     if (sourceLangId && targetLangId) {
-      console.log('sourceLangId && targetLangId', sourceLangId && targetLangId)
+      console.log('sourceLangId && targetLangId', sourceLangId, targetLangId)
       setConfig({
         model: "models/gemini-2.0-flash-exp",
         generationConfig: {

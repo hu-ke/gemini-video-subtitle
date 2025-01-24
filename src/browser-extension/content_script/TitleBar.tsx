@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useMemo } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { createUseStyles } from 'react-jss'
 import { BaseProvider } from 'baseui-sd'
 import { Provider as StyletronProvider } from 'styletron-react'
