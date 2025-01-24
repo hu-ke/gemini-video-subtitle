@@ -36,11 +36,12 @@ interface IInnerSettingsProps {
 interface ILangSelectorProps {
     value?: string
     onChange?: (value: string) => void
+    onValueChange?: (value: string) => void
     onBlur?: () => void
     options: Option[]
 }
 
-function LangSelector({value, onChange, options}: ILangSelectorProps) {
+function LangSelector({value, onChange, options, onValueChange}: ILangSelectorProps) {
     return (
         <Select
             size='mini'
@@ -58,6 +59,7 @@ function LangSelector({value, onChange, options}: ILangSelectorProps) {
             }
             onChange={(params) => {
                 onChange?.(params.value[0].id as string)
+                onValueChange?.(params.value[0].id as string)
             }}
         />
     )
@@ -75,7 +77,6 @@ export function InnerSettings({
     const [loading, setLoading] = useState(false)
     const { settings, setSettings } = useSettings()
     const [values, setValues] = useState<ISettings>(settings)
-    const [prevValues, setPrevValues] = useState<ISettings>(values)
     const [sourceLangId, setSourceLangId] = useState(defaultSourceLangId)
     const [targetLangId, setTargetLangId] = useState(defaultTargetLangId)
 
@@ -89,7 +90,8 @@ export function InnerSettings({
         if (settings) {
             ;(async () => {
                 setValues(settings)
-                setPrevValues(settings)
+                setSourceLangId(settings.sourceLangId)
+                setTargetLangId(settings.targetLangId)
             })()
         }
     }, [settings])
@@ -113,13 +115,6 @@ export function InnerSettings({
         },
         [onSave, setSettings, refreshThemeType, t]
     )
-
-    const onBlur = useCallback(async () => {
-        if (values.apiKeys && !_.isEqual(values, prevValues)) {
-            await utils.setSettings(values)
-            setPrevValues(values)
-        }
-    }, [prevValues, values])
 
     const [isScrolled, setIsScrolled] = useState(window.scrollY > 0)
 
@@ -150,6 +145,13 @@ export function InnerSettings({
             }
         })
     }, [sourceLangId])
+
+    const onSourceLangChange = (langId: string) => {
+        setSourceLangId(langId)
+    }
+    const onTargetLangChange = (langId: string) => {
+        setTargetLangId(langId)
+    }
 
     return (
         <div
@@ -275,7 +277,6 @@ export function InnerSettings({
                                     type='password'
                                     size='compact'
                                     name='apiKey'
-                                    onBlur={onBlur}
                                 />
                             </FormItem>
                             <FormItem
@@ -283,14 +284,14 @@ export function InnerSettings({
                                 name='sourceLangId'
                                 label={t('Video Source Language')}
                             >
-                                <LangSelector options={sourceLangOptions} />
+                                <LangSelector options={sourceLangOptions} onValueChange={onSourceLangChange} />
                             </FormItem>
                             <FormItem
                                 required={true}
                                 name='targetLangId'
                                 label={t('Translate to')}
                             >
-                                <LangSelector options={targetLangOptions} />
+                                <LangSelector options={targetLangOptions} onValueChange={onTargetLangChange} />
                             </FormItem>
                         </div>
                     </div>

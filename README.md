@@ -19,3 +19,9 @@
     <img alt="Chrome" src="https://img.shields.io/chrome-web-store/stars/ogjibjphoadhljaoicdnjnmgokohngcc?color=blue&label=Chrome&style=flat-square&logo=google-chrome&logoColor=white" />
   </a>
 </p>
+
+# Showcase
+## English to Chinese
+![screenshot1](./public/screenshot1.png)
+
+## Japanese to English
